@@ -22,7 +22,7 @@ export default function RoomFilter() {
         Floor I <FontAwesomeIcon icon={faCouch} />
       </Button>{" "}
       <Button outline color="secondary">
-        Violetta <FontAwesomeIcon icon={faBabyCarriage} />
+        Kid's Room <FontAwesomeIcon icon={faBabyCarriage} />
       </Button>{" "}
       <Button outline color="secondary">
         Corridor <FontAwesomeIcon icon={faShoePrints} />
