@@ -13,7 +13,7 @@ import {
 
 export default function FloorI() {
   return (
-    <div class="room">
+    <div className="room">
       <h1>
         Floor I <FontAwesomeIcon icon={faCouch} />
       </h1>
@@ -22,7 +22,7 @@ export default function FloorI() {
         <Card>
           <CardHeader>Temp</CardHeader>
           <CardBody>
-            <CardText class="card-text">
+            <CardText>
               25.1&deg;C&nbsp;
               <FontAwesomeIcon icon={faThermometerHalf} />
             </CardText>

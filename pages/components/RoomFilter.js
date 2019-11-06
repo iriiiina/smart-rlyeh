@@ -12,16 +12,34 @@ import {
   faShoePrints
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function RoomFilter() {
+const rooms = [
+  {
+    id: "bedroom",
+    name: "Bedroom",
+    icon: faBed,
+    default: true
+  },
+  {
+    id: "floor1",
+    name: "Floor I",
+    icon: faCouch,
+    default: false
+  }
+];
+
+export default function RoomFilter(props) {
+
   return (
-    <div class="room-filter">
-      <Button outline color="success">
-        Bedroom <FontAwesomeIcon icon={faBed} />
-      </Button>{" "}
-      <Button outline color="success">
-        Floor I <FontAwesomeIcon icon={faCouch} />
-      </Button>{" "}
-      <Button outline color="secondary">
+    <div className="room-filter">
+
+      {rooms.map(
+        (room) =>
+        <Button key={room.id} outline color={props.activeRoomId === room.id ? "success" : "secondary"} onClick={() => props.setActiveRoomId(room.id)}>
+          {room.name} <FontAwesomeIcon icon={room.icon} />
+        </Button>
+        )}
+
+      {/* <Button outline color="secondary">
         Kid's Room <FontAwesomeIcon icon={faBabyCarriage} />
       </Button>{" "}
       <Button outline color="secondary">
@@ -32,7 +50,7 @@ export default function RoomFilter() {
       </Button>{" "}
       <Button outline color="secondary">
         Bathroom II <FontAwesomeIcon icon={faBath} />
-      </Button>{" "}
+      </Button>{" "} */}
     </div>
   );
 }

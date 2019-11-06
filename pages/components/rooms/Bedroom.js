@@ -12,7 +12,7 @@ import { faEnvira } from "@fortawesome/free-brands-svg-icons";
 
 export default function Bedroom() {
   return (
-    <div class="room">
+    <div className="room">
       <h1>
         Bedroom <FontAwesomeIcon icon={faBed} />
       </h1>
@@ -21,7 +21,7 @@ export default function Bedroom() {
         <Card>
           <CardHeader>Temp</CardHeader>
           <CardBody>
-            <CardText class="card-text">
+            <CardText>
               24.5&deg;C&nbsp;
               <FontAwesomeIcon icon={faThermometerHalf} />
             </CardText>

@@ -6,15 +6,19 @@ import RoomFilter from "./components/RoomFilter";
 import Bedroom from "./components/rooms/Bedroom";
 import FloorI from "./components/rooms/FloorI";
 
-const Index = () => (
-  <div class="body">
+const Index = () => {
+
+  const [activeRoomId, setActiveRoomId] = React.useState("bedroom");
+  console.log({activeRoomId});
+
+  return (<div className="body">
     <Alerts />
 
-    <RoomFilter />
+    <RoomFilter setActiveRoomId={setActiveRoomId} activeRoomId={activeRoomId}/>
 
-    <Bedroom />
-    <FloorI />
-  </div>
-);
+    {activeRoomId === "bedroom" && <Bedroom />}
+    {activeRoomId === "floor1" && <FloorI />}
+  </div>);
+}
 
 export default Index;
